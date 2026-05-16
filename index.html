@@ -342,12 +342,34 @@
         message += `• ${item.quantity}x ${item.name} - ${formatPrice(item.subtotal)}%0A`;
       });
 
-      message += `%0A🧾 *TOTAL:* ${formatPrice(total)}`;
+message += `%0A🧾 *TOTAL:* ${formatPrice(total)}`;
 
-      const phone = '595982467911';
-      const url = `https://wa.me/${phone}?text=${message}`;
+fetch("https://script.google.com/macros/s/AKfycbxeoudzoJenCnvwYdS3GomuE90G6JfvwinSX18Sip-VB9-euxZIDnHj6hqMig6PCxZsGA/exec", {
 
-      window.open(url, '_blank');
+  method: "POST",
+
+  mode: "no-cors",
+
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+
+    items: cart,
+
+    total: total
+
+  })
+
+});
+
+const phone = '595982467911';
+
+const url =
+  `https://wa.me/${phone}?text=${message}`;
+
+window.open(url, '_blank');
     }
 
     function toggleCart() {
