@@ -106,30 +106,69 @@
   </div>
 
   <!-- HEADER -->
-  <header class="bg-[#502314] text-white sticky top-0 z-50 shadow-lg">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center justify-between gap-2 flex-wrap">
-        <img src="images/logo-brisa.jpg" alt="Brisa Logo" class="w-14 h-14 rounded-full object-cover bg-white p-1 shadow-lg" />
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#502314]/95 border-b border-white/10 shadow-2xl">
 
-        <div>
-          <h1 class="text-2xl font-extrabold tracking-wide">
-            BRISA
-          </h1>
-          <p class="text-sm text-orange-200">
-            Una cocinera con años de experiencia
-          </p>
-        </div>
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- LOGO -->
+    <div class="flex items-center gap-4">
+
+      <div class="relative">
+
+        <div class="absolute inset-0 bg-[#ffb347] blur-xl opacity-40 rounded-full"></div>
+
+        <img
+        src="images/logo-brisa.jpg"
+        alt="Brisa Logo"
+        class="relative w-16 h-16 rounded-full object-cover bg-white p-1 shadow-2xl border-2 border-white hover:scale-110 transition duration-300" />
+
       </div>
 
-      <nav class="hidden lg:flex gap-8 font-bold text-lg fade-up">
-        <a href="#hamburguesas" class="hover:text-[#ffb347] transition">Hamburguesas</a>
-        <a href="#pollo" class="hover:text-[#ffb347] transition">Pollo</a>
-        <a href="#adicionales" class="hover:text-[#ffb347] transition">Adicional</a>
-      </nav>
+      <div>
 
-      
+        <h1 class="text-3xl font-black tracking-wide text-white leading-none">
+          BRISA
+        </h1>
+
+        <p class="text-sm text-orange-200 mt-1">
+          Una cocinera con años de experiencia
+        </p>
+
+      </div>
+
     </div>
-  </header>
+
+    <!-- MENU -->
+    <nav class="hidden lg:flex items-center gap-3 font-bold text-lg">
+
+      <a href="#hamburguesas"
+      class="px-5 py-3 rounded-full text-white hover:bg-white hover:text-[#502314] transition duration-300">
+      Hamburguesas
+      </a>
+
+      <a href="#pollo"
+      class="px-5 py-3 rounded-full text-white hover:bg-white hover:text-[#502314] transition duration-300">
+        Pollo
+      </a>
+
+      <a href="#adicionales"
+      class="px-5 py-3 rounded-full text-white hover:bg-white hover:text-[#502314] transition duration-300">
+        Adicionales
+      </a>
+
+      <a href="#heladeria"
+      class="px-5 py-3 rounded-full bg-[#8e44ad] text-white hover:scale-105 transition duration-300 shadow-xl">
+        🍦 Heladería
+      </a>
+
+    </nav>
+
+  </div>
+
+  <!-- LINEA BRILLO -->
+  <div class="h-[3px] w-full bg-gradient-to-r from-[#ffb347] via-white to-[#8e44ad]"></div>
+
+</header>
 
   <!-- HERO -->
   <section class="relative h-[500px] md:h-[750px] overflow-hidden">
