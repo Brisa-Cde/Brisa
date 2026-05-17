@@ -827,11 +827,29 @@ window.open(url, '_blank');
       heroTitle.textContent = slides[current].title;
       heroDescription.textContent = slides[current].description;
     }, 4000);
-  </script>
-  
-<!-- AVISO HELADERIA -->
+    function verificarHeladeria() {
 
-<div id="heladeria-cerrada"
+  if (true) {
+
+    document
+      .getElementById("heladeria-cerrada")
+      .classList.remove("hidden");
+
+  }
+
+}
+
+function cerrarAvisoHeladeria() {
+
+  document
+    .getElementById("heladeria-cerrada")
+    .classList.add("hidden");
+
+}
+
+verificarHeladeria();
+  </script>
+  <div id="heladeria-cerrada"
 class="hidden fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center p-5">
 
   <div class="bg-white rounded-[35px] max-w-md w-full p-8 text-center shadow-2xl">
@@ -845,7 +863,7 @@ class="hidden fixed inset-0 bg-black/70 z-[9999] flex items-center justify-cente
       <br><br>
       Volvemos mañana desde las
       <span class="font-black">
-        14:00 PM
+        06:00 AM
       </span>
     </p>
 
@@ -858,6 +876,5 @@ class="hidden fixed inset-0 bg-black/70 z-[9999] flex items-center justify-cente
   </div>
 
 </div>
-  
 </body>
 </html>
