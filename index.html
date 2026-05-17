@@ -828,6 +828,31 @@ window.open(url, '_blank');
       heroDescription.textContent = slides[current].description;
     }, 4000);
   </script>
+function verificarHeladeria() {
 
+  const hora =
+    new Date().getHours();
+
+  // DESPUES DE LAS 18:00
+
+  if (hora >= 18) {
+
+    document
+      .getElementById("heladeria-cerrada")
+      .classList.remove("hidden");
+
+  }
+
+}
+
+function cerrarAvisoHeladeria() {
+
+  document
+    .getElementById("heladeria-cerrada")
+    .classList.add("hidden");
+
+}
+
+verificarHeladeria();
 </body>
 </html>
