@@ -710,6 +710,7 @@ class="bg-[#25D366] text-white px-5 py-3 rounded-full font-bold inline-block tex
       });
 
       renderCart();
+      showToast();
     }
 
     function removeItem(index) {
@@ -834,6 +835,38 @@ window.open(url, '_blank');
       heroTitle.textContent = slides[current].title;
       heroDescription.textContent = slides[current].description;
     }, 4000);
+    function showToast() {
+
+  const toast =
+    document.getElementById('toast');
+
+  toast.style.display = 'block';
+
+  setTimeout(() => {
+
+    toast.style.display = 'none';
+
+  }, 2000);
+
+}
   </script>
 </body>
+  <div id="toast"
+style="
+position:fixed;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+background:#25D366;
+color:white;
+padding:16px 28px;
+border-radius:999px;
+font-weight:900;
+font-size:18px;
+z-index:999999;
+display:none;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+">
+✅ Producto agregado al pedido
+</div>
 </html>
