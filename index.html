@@ -840,23 +840,29 @@ window.open(url, '_blank');
   const toast =
     document.getElementById('toast');
 
-  toast.style.display = 'block';
+  toast.style.opacity = '1';
+
+  toast.style.transform =
+    'translateX(-50%) translateY(0px)';
 
   setTimeout(() => {
 
-    toast.style.display = 'none';
+    toast.style.opacity = '0';
+
+    toast.style.transform =
+      'translateX(-50%) translateY(30px)';
 
   }, 2000);
 
 }
   </script>
 </body>
-  <div id="toast"
+<div id="toast"
 style="
 position:fixed;
 bottom:30px;
 left:50%;
-transform:translateX(-50%);
+transform:translateX(-50%) translateY(30px);
 background:#25D366;
 color:white;
 padding:16px 28px;
@@ -864,9 +870,11 @@ border-radius:999px;
 font-weight:900;
 font-size:18px;
 z-index:999999;
-display:none;
+opacity:0;
+pointer-events:none;
+transition:all .4s ease;
 box-shadow:0 10px 30px rgba(0,0,0,.25);
 ">
-✅ Producto agregado al pedido
+  Producto agregado al pedido
 </div>
 </html>
