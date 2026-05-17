@@ -828,31 +828,34 @@ window.open(url, '_blank');
       heroDescription.textContent = slides[current].description;
     }, 4000);
   </script>
-function verificarHeladeria() {
+<!-- AVISO HELADERIA -->
 
-  const hora =
-    new Date().getHours();
+<div id="heladeria-cerrada"
+class="hidden fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center p-5">
 
-  // DESPUES DE LAS 18:00
+  <div class="bg-white rounded-[35px] max-w-md w-full p-8 text-center shadow-2xl">
 
-  if (hora >= 18) {
+    <h2 class="text-4xl font-black text-[#8e44ad] mb-5">
+      🍦 Heladería Cerrada
+    </h2>
 
-    document
-      .getElementById("heladeria-cerrada")
-      .classList.remove("hidden");
+    <p class="text-xl text-[#7a4d32] leading-relaxed">
+      La heladería ya cerró por hoy 😢
+      <br><br>
+      Volvemos mañana desde las
+      <span class="font-black">
+        06:00 AM
+      </span>
+    </p>
 
-  }
+    <button
+    onclick="cerrarAvisoHeladeria()"
+    class="mt-8 bg-[#8e44ad] hover:bg-[#732d91] text-white px-8 py-4 rounded-full font-black">
+      Entendido
+    </button>
 
-}
+  </div>
 
-function cerrarAvisoHeladeria() {
-
-  document
-    .getElementById("heladeria-cerrada")
-    .classList.add("hidden");
-
-}
-
-verificarHeladeria();
+</div>
 </body>
 </html>
