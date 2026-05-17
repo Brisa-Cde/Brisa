@@ -735,19 +735,8 @@
       const phone = '595982467911';
       const url = `https://wa.me/${phone}?text=${message}`;
 
-// ENVIAR A GOOGLE SHEETS
-fetch("https://script.google.com/macros/s/AKfycbxeoudzoJenCnvwYdS3GomuE90G6JfvwinSX18Sip-VB9-euxZIDnHj6hqMig6PCxZsGA/exec", {
-  method: "POST",
-  mode: "no-cors",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    items: cart
-  })
-});
-
-window.open(url, '_blank');
+      window.open(url, '_blank');
+    }
 
     function toggleCart() {
       const cart = document.getElementById('cartPanel');
