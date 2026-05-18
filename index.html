@@ -911,21 +911,33 @@ window.open(url, '_blank');
 <div id="toast"
 style="
 position:fixed;
-bottom:30px;
+bottom:90px;
 left:50%;
 transform:translateX(-50%) translateY(30px);
 background:#25D366;
 color:white;
-padding:16px 28px;
-border-radius:999px;
-font-weight:900;
-font-size:18px;
+padding:12px 20px;
+border-radius:18px;
+font-weight:800;
+font-size:15px;
 z-index:999999;
 opacity:0;
 pointer-events:none;
 transition:all .4s ease;
 box-shadow:0 10px 30px rgba(0,0,0,.25);
+max-width:90%;
+width:max-content;
+text-align:center;
+display:flex;
+align-items:center;
+gap:10px;
 ">
-  Producto agregado al pedido
+
+  <span style="font-size:20px;"></span>
+
+  <span>
+    Producto agregado
+  </span>
+
 </div>
 </html>
