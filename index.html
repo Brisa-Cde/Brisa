@@ -4,6 +4,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brisa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -55,11 +60,8 @@
       }
     }
   </style>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brisa</title>
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-[#f5ebdc] text-[#502314] font-sans">
 
   <!-- BOTON CARRITO -->
@@ -99,7 +101,7 @@
         </button>
 
         <button type="button" onclick="finishPurchase()" class="flex-1 bg-[#d62300] hover:bg-[#b91f00] transition text-white px-4 py-3 rounded-2xl font-bold">
-          Finalizar
+          Pedir
         </button>
       </div>
     </div>
@@ -107,84 +109,62 @@
 
   <!-- HEADER -->
   <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#502314]/95 border-b border-white/10 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <div class="absolute inset-0 bg-[#ffb347] blur-2xl opacity-40 rounded-full"></div>
 
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <img
+            src="images/logo-brisa.jpg"
+            alt="Brisa Logo"
+            class="relative w-16 h-16 rounded-2xl object-cover border-2 border-white/40 shadow-2xl hover:rotate-3 hover:scale-105 transition duration-300"
+          />
+        </div>
 
-    <!-- LOGO -->
-    <div class="flex items-center gap-3">
+        <div class="leading-none">
+          <span class="text-[12px] uppercase tracking-[3px] text-orange-200 font-bold">
+            Comida Rapida & Heladería
+          </span>
 
-  <!-- LOGO -->
-  <div class="relative">
+          <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight mt-1">
+            BRISA
+          </h1>
 
-    <div class="absolute inset-0 bg-[#ffb347] blur-2xl opacity-40 rounded-full"></div>
+          <div class="flex items-center gap-2 mt-2">
+            <div class="w-8 h-[3px] rounded-full bg-gradient-to-r from-[#ffb347] to-[#8e44ad]"></div>
 
-    <img
-    src="images/logo-brisa.jpg"
-    alt="Brisa Logo"
-    class="relative w-16 h-16 rounded-2xl object-cover border-2 border-white/40 shadow-2xl hover:rotate-3 hover:scale-105 transition duration-300" />
+            <p class="text-[14px] text-orange-100 font-medium">
+              Sabor que enamora ✨
+            </p>
+          </div>
+        </div>
+      </div>
 
-  </div>
+      <nav class="hidden lg:flex items-center gap-3 font-bold text-lg">
+        <a href="#hamburguesas" class="px-5 py-3 rounded-full text-white hover:bg-white hover:text-[#502314] transition duration-300">
+          Hamburguesas
+        </a>
 
-  <!-- TEXTO -->
-  <div class="leading-none">
+        <a href="#pollo" class="px-5 py-3 rounded-full text-white hover:bg-white hover:text-[#502314] transition duration-300">
+          Pollo
+        </a>
 
-    <span class="text-[12px] uppercase tracking-[3px] text-orange-200 font-bold">
-      Comida Rapida & Heladería
-    </span>
+        <a href="#adicionales" class="px-5 py-3 rounded-full text-white hover:bg-white hover:text-[#502314] transition duration-300">
+          Adicionales
+        </a>
 
-    <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight mt-1">
-      BRISA
-    </h1>
-
-    <div class="flex items-center gap-2 mt-2">
-
-      <div class="w-8 h-[3px] rounded-full bg-gradient-to-r from-[#ffb347] to-[#8e44ad]"></div>
-
-      <p class="text-[14px] text-orange-100 font-medium">
-        Sabor que enamora ✨
-      </p>
-
+        <a href="#heladeria" class="px-5 py-3 rounded-full bg-[#8e44ad] text-white hover:scale-105 transition duration-300 shadow-xl">
+          Heladería
+        </a>
+      </nav>
     </div>
 
-  </div>
-
-</div>
-
-    <!-- MENU -->
-    <nav class="hidden lg:flex items-center gap-3 font-bold text-lg">
-
-      <a href="#hamburguesas"
-      class="px-5 py-3 rounded-full text-white hover:bg-white hover:text-[#502314] transition duration-300">
-      Hamburguesas
-      </a>
-
-      <a href="#pollo"
-      class="px-5 py-3 rounded-full text-white hover:bg-white hover:text-[#502314] transition duration-300">
-        Pollo
-      </a>
-
-      <a href="#adicionales"
-      class="px-5 py-3 rounded-full text-white hover:bg-white hover:text-[#502314] transition duration-300">
-        Adicionales
-      </a>
-
-      <a href="#heladeria"
-      class="px-5 py-3 rounded-full bg-[#8e44ad] text-white hover:scale-105 transition duration-300 shadow-xl">
-        Heladería
-      </a>
-
-    </nav>
-
-  </div>
-
-  <!-- LINEA BRILLO -->
-  <div class="h-[3px] w-full bg-gradient-to-r from-[#ffb347] via-white to-[#8e44ad]"></div>
-
-</header>
+    <div class="h-[3px] w-full bg-gradient-to-r from-[#ffb347] via-white to-[#8e44ad]"></div>
+  </header>
 
   <!-- HERO -->
-  <section class="relative h-[500px] md:h-[750px] overflow-hidden">
-    <img id="heroImage" src="images/jardinera.jpg" class="absolute inset-0 w-full h-full object-cover hero-zoom transition-all duration-700" />
+  <section class="relative h-[500px] md:h-[700px] overflow-hidden mb-8 md:mb-12">
+    <img id="heroImage" src="images/jardinera.jpg" class="absolute inset-0 w-full h-full object-cover hero-zoom transition-all duration-700" alt="Jardinera" />
 
     <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
 
@@ -206,23 +186,50 @@
   </section>
 
   <!-- POLLO -->
-  <section id="pollo" class="max-w-7xl mx-auto px-4 md:px-6 pb-32 md:pb-16">
-    <h2 class="text-4xl md:text-5xl font-black mb-3">Pollo Frito</h2>
-    <p class="text-lg mb-10 text-[#7a4d32]">Crujiente por fuera, jugoso por dentro 🔥</p>
+  <section id="pollo" class="relative max-w-7xl mx-auto px-4 md:px-6 pb-32 md:pb-16">
+    <div class="relative mb-12 overflow-hidden rounded-[34px] bg-[#fff8f0] border border-[#eadbc8] shadow-xl">
+      <div class="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-[#d62300] via-[#ffb347] to-[#502314]"></div>
+      <div class="absolute -right-10 -top-10 w-36 h-36 rounded-full bg-[#ffb347]/25"></div>
+      <div class="absolute -left-8 bottom-0 w-28 h-28 rounded-full bg-[#d62300]/10"></div>
+
+      <div class="relative px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+        <div>
+          <span class="inline-block mb-3 text-xs md:text-sm font-black uppercase tracking-[3px] text-[#d62300]">
+            Especialidad de la casa
+          </span>
+
+          <h2 class="text-4xl md:text-6xl font-black text-[#502314] leading-none">
+            Pollo Frito
+          </h2>
+
+          <p class="mt-4 text-lg md:text-xl text-[#7a4d32] font-medium">
+            Crujiente por fuera, jugoso por dentro 🔥
+          </p>
+        </div>
+
+        <div class="bg-[#502314] text-white px-5 py-4 rounded-3xl shadow-lg border-2 border-[#ffb347]">
+          <p class="text-sm uppercase tracking-[2px] text-orange-200 font-bold">
+            Brisa
+          </p>
+          <p class="text-2xl font-black">
+            Sabor recién hecho
+          </p>
+        </div>
+      </div>
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-
       <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-        <img src="images/jardinera.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
+        <img src="images/jardinera.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Jardinera" />
         <div class="p-5">
           <h3 class="text-2xl md:text-3xl font-black">JARDINERA</h3>
           <p class="mt-4 text-[#7a4d32]">7 piezas de pollo, papas fritas, jamón, queso, aceitunas, huevo, pan de ajo y salsas.</p>
           <div class="mt-6 flex flex-col gap-4">
             <span class="text-3xl font-black text-[#d62300]">G$ 80.000</span>
             <div class="flex items-center justify-between gap-2 flex-wrap">
-              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">-</button>
+              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">-</button>
               <span class="quantity-value text-lg md:text-xl font-black min-w-[20px] text-center">1</span>
-              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">+</button>
+              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">+</button>
               <button type="button" onclick="addToCartWithQuantity(this, 'JARDINERA', 80000)" class="bg-[#d62300] text-white px-4 md:px-5 py-3 rounded-full font-bold hover:scale-105 transition duration-300 text-sm md:text-base min-w-[110px]">Agregar</button>
             </div>
           </div>
@@ -230,16 +237,16 @@
       </div>
 
       <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-        <img src="images/familiar.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
+        <img src="images/familiar.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Familiar" />
         <div class="p-5">
           <h3 class="text-2xl md:text-3xl font-black">FAMILIAR</h3>
           <p class="mt-4 text-[#7a4d32]">10 piezas de pollo, papas fritas, pan y salsas.</p>
           <div class="mt-6 flex flex-col gap-4">
             <span class="text-3xl font-black text-[#d62300]">G$ 70.000</span>
             <div class="flex items-center justify-between gap-2 flex-wrap">
-              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">-</button>
+              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">-</button>
               <span class="quantity-value text-lg md:text-xl font-black min-w-[20px] text-center">1</span>
-              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">+</button>
+              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">+</button>
               <button type="button" onclick="addToCartWithQuantity(this, 'FAMILIAR', 70000)" class="bg-[#d62300] text-white px-4 md:px-5 py-3 rounded-full font-bold hover:scale-105 transition duration-300 text-sm md:text-base min-w-[110px]">Agregar</button>
             </div>
           </div>
@@ -247,42 +254,70 @@
       </div>
 
       <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-        <img src="images/personal.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
+        <img src="images/personal.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Personal" />
         <div class="p-5">
           <h3 class="text-2xl md:text-3xl font-black">PERSONAL</h3>
           <p class="mt-4 text-[#7a4d32]">5 piezas de pollo y papas fritas.</p>
           <div class="mt-6 flex flex-col gap-4">
             <span class="text-3xl font-black text-[#d62300]">G$ 30.000</span>
             <div class="flex items-center justify-between gap-2 flex-wrap">
-              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">-</button>
+              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">-</button>
               <span class="quantity-value text-lg md:text-xl font-black min-w-[20px] text-center">1</span>
-              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">+</button>
+              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">+</button>
               <button type="button" onclick="addToCartWithQuantity(this, 'PERSONAL', 30000)" class="bg-[#d62300] text-white px-4 md:px-5 py-3 rounded-full font-bold hover:scale-105 transition duration-300 text-sm md:text-base min-w-[110px]">Agregar</button>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- HAMBURGUESAS -->
-  <section id="hamburguesas" class="max-w-7xl mx-auto px-4 md:px-6 pb-32 md:pb-16">
-    <h2 class="text-4xl md:text-5xl font-black mb-3">Hamburguesas</h2>
-    <p class="text-lg mb-10 text-[#7a4d32]">Elegí tu favorita 🍔</p>
+<section id="hamburguesas" class="relative max-w-7xl mx-auto px-4 md:px-6 pb-32 md:pb-16">
+  <div class="relative mb-12 overflow-hidden rounded-[34px] bg-[#fff8f0] border border-[#eadbc8] shadow-xl">
+    <div class="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-[#d62300] via-[#ffb347] to-[#502314]"></div>
+    <div class="absolute -right-10 -top-10 w-36 h-36 rounded-full bg-[#ffb347]/25"></div>
+    <div class="absolute -left-8 bottom-0 w-28 h-28 rounded-full bg-[#d62300]/10"></div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+    <div class="relative px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+      <div>
+        <span class="inline-block mb-3 text-xs md:text-sm font-black uppercase tracking-[3px] text-[#d62300]">
+          Clásicas y sabrosas
+        </span>
+
+        <h2 class="text-4xl md:text-6xl font-black text-[#502314] leading-none">
+          Hamburguesas
+        </h2>
+
+        <p class="mt-4 text-lg md:text-xl text-[#7a4d32] font-medium">
+          Elegí tu favorita 🍔
+        </p>
+      </div>
+
+      <div class="bg-[#502314] text-white px-5 py-4 rounded-3xl shadow-lg border-2 border-[#ffb347]">
+        <p class="text-sm uppercase tracking-[2px] text-orange-200 font-bold">
+          Brisa
+        </p>
+        <p class="text-2xl font-black">
+          Bien cargadas
+        </p>
+      </div>
+    </div>
+  </div>
+
+     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
       <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-        <img src="images/hamburguesa.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
+        <img src="images/hamburguesa.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Hamburguesa" />
         <div class="p-5">
           <h3 class="text-2xl md:text-3xl font-black">HAMBURGUESA</h3>
           <p class="mt-4 text-[#7a4d32]">Carne jugosa, queso cheddar, lechuga, tomate y salsa.</p>
           <div class="mt-6 flex flex-col gap-4">
             <span class="text-3xl font-black text-[#d62300]">G$ 12.000</span>
             <div class="flex items-center justify-between gap-2 flex-wrap">
-              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">-</button>
+              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">-</button>
               <span class="quantity-value text-lg md:text-xl font-black min-w-[20px] text-center">1</span>
-              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">+</button>
+              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">+</button>
               <button type="button" onclick="addToCartWithQuantity(this, 'HAMBURGUESA', 12000)" class="bg-[#d62300] text-white px-4 md:px-5 py-3 rounded-full font-bold hover:scale-105 transition duration-300 text-sm md:text-base min-w-[110px]">Agregar</button>
             </div>
           </div>
@@ -291,25 +326,52 @@
     </div>
   </section>
 
-  <!-- ADICIONALES -->
-</section>
-  <section id="adicionales" class="max-w-7xl mx-auto px-4 md:px-6 pb-40 md:pb-24">
-    <h2 class="text-4xl md:text-5xl font-black mb-3">Adicionales</h2>
-    <p class="text-lg mb-10 text-[#7a4d32]">Sumá más sabor 🍟</p>
+ <!-- ADICIONALES -->
+<section id="adicionales" class="relative max-w-7xl mx-auto px-4 md:px-6 pb-40 md:pb-24">
+  <div class="relative mb-12 overflow-hidden rounded-[34px] bg-[#fff8f0] border border-[#eadbc8] shadow-xl">
+    <div class="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-[#ffb347] via-[#d62300] to-[#502314]"></div>
+    <div class="absolute -right-10 -top-10 w-36 h-36 rounded-full bg-[#d62300]/10"></div>
+    <div class="absolute -left-8 bottom-0 w-28 h-28 rounded-full bg-[#ffb347]/25"></div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+    <div class="relative px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+      <div>
+        <span class="inline-block mb-3 text-xs md:text-sm font-black uppercase tracking-[3px] text-[#d62300]">
+          Para acompañar
+        </span>
+
+        <h2 class="text-4xl md:text-6xl font-black text-[#502314] leading-none">
+          Adicionales
+        </h2>
+
+        <p class="mt-4 text-lg md:text-xl text-[#7a4d32] font-medium">
+          Sumá más sabor 🍟
+        </p>
+      </div>
+
+      <div class="bg-[#502314] text-white px-5 py-4 rounded-3xl shadow-lg border-2 border-[#ffb347]">
+        <p class="text-sm uppercase tracking-[2px] text-orange-200 font-bold">
+          Extra sabor
+        </p>
+        <p class="text-2xl font-black">
+          Para completar
+        </p>
+      </div>
+    </div>
+  </div>
+
+     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
 
       <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-        <img src="images/papas-cheddar-bacon.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
+        <img src="images/papas-cheddar-bacon.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Papas cheddar bacon" />
         <div class="p-5">
           <h3 class="text-2xl md:text-3xl font-black">PAPAS CHEDDAR BACON</h3>
           <p class="mt-4 text-[#7a4d32]">Papas fritas con cheddar y bacon crispy.</p>
           <div class="mt-6 flex flex-col gap-4">
             <span class="text-3xl font-black text-[#d62300]">G$ 25.000</span>
             <div class="flex items-center justify-between gap-2 flex-wrap">
-              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">-</button>
+              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">-</button>
               <span class="quantity-value text-lg md:text-xl font-black min-w-[20px] text-center">1</span>
-              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">+</button>
+              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">+</button>
               <button type="button" onclick="addToCartWithQuantity(this, 'PAPAS CHEDDAR BACON', 25000)" class="bg-[#d62300] text-white px-4 md:px-5 py-3 rounded-full font-bold hover:scale-105 transition duration-300 text-sm md:text-base min-w-[110px]">Agregar</button>
             </div>
           </div>
@@ -317,402 +379,193 @@
       </div>
 
       <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-        <img src="images/coca-cola-1lt.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
+        <img src="images/coca-cola-1lt.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Coca Cola 1LT" />
         <div class="p-5">
           <h3 class="text-2xl md:text-3xl font-black">COCA COLA 1LT</h3>
           <p class="mt-4 text-[#7a4d32]">Bebida fría y refrescante.</p>
           <div class="mt-6 flex flex-col gap-4">
             <span class="text-3xl font-black text-[#d62300]">G$ 10.000</span>
             <div class="flex items-center justify-between gap-2 flex-wrap">
-              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">-</button>
+              <button type="button" onclick="changeQuantity(this, -1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">-</button>
               <span class="quantity-value text-lg md:text-xl font-black min-w-[20px] text-center">1</span>
-              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl flex items-center justify-center shrink-0">+</button>
+              <button type="button" onclick="changeQuantity(this, 1)" class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-200 font-black text-lg md:text-xl">+</button>
               <button type="button" onclick="addToCartWithQuantity(this, 'COCA COLA 1LT', 10000)" class="bg-[#d62300] text-white px-4 md:px-5 py-3 rounded-full font-bold hover:scale-105 transition duration-300 text-sm md:text-base min-w-[110px]">Agregar</button>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
-<!-- ========================= -->
-<!-- 🍦 HELADERÍA -->
-<!-- ========================= -->
 
-<section id="heladeria" class="max-w-7xl mx-auto px-4 md:px-6 pb-40 md:pb-24">
+  <!-- HELADERIA -->
+<section id="heladeria" class="relative max-w-7xl mx-auto px-4 md:px-6 pb-40 md:pb-24">
+  <div class="relative mb-12 overflow-hidden rounded-[34px] bg-[#fff8f0] border border-[#eadbc8] shadow-xl">
+    <div class="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-[#8e44ad] via-[#ffb347] to-[#502314]"></div>
+    <div class="absolute -right-10 -top-10 w-36 h-36 rounded-full bg-[#8e44ad]/15"></div>
+    <div class="absolute -left-8 bottom-0 w-28 h-28 rounded-full bg-[#ffb347]/25"></div>
 
-  <h2 class="text-4xl md:text-5xl font-black mb-3 text-[#8e44ad]">
-    🍦 Heladería
-  </h2>
+    <div class="relative px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+      <div>
+        <span class="inline-block mb-3 text-xs md:text-sm font-black uppercase tracking-[3px] text-[#8e44ad]">
+          Dulce y refrescante
+        </span>
 
-  <p class="text-lg mb-10 text-[#7a4d32]">
-    Refrescate con nuestros postres y helados premium 😎
-  </p>
+        <h2 class="text-4xl md:text-6xl font-black text-[#8e44ad] leading-none">
+          🍦 Heladería
+        </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-
-
-    <!-- CASCAO VAINILLA -->
-
-    <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-
-      <img src="images/cascao-vainilla.jpg"
-      class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
-
-      <div class="p-5">
-
-        <h3 class="text-2xl font-black">
-          CASCAO VAINILLA
-        </h3>
-        
-        <div class="mt-6 flex flex-col gap-4">
-
-          <span class="text-3xl font-black text-[#8e44ad]">
-            G$ 7.000
-          </span>
-
-          <div class="flex items-center justify-between gap-2">
-
-            <button onclick="changeQuantity(this,-1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
-
-            <span class="quantity-value text-xl font-black">1</span>
-
-            <button onclick="changeQuantity(this,1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
-
-            <a
-href="https://wa.me/595982467911?text=Hola,%20quiero%20pedir%20un%20CASCAO VAINILLA"
-target="_blank"
-class="bg-[#25D366] text-white px-5 py-3 rounded-full font-bold inline-block text-center">
-  Pedir
-</a>
-
-          </div>
-
-        </div>
-
+        <p class="mt-4 text-lg md:text-xl text-[#7a4d32] font-medium">
+          Refrescate con nuestros postres y helados premium 😎
+        </p>
       </div>
 
-    </div>
-
-
-    <!-- ACAI 250 -->
-
-    <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-
-      <img src="images/acai-250.jpg"
-      class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
-
-      <div class="p-5">
-
-        <h3 class="text-2xl font-black">
-          AÇAI 250ML
-        </h3>
-
-        <div class="mt-6 flex flex-col gap-4">
-
-          <span class="text-3xl font-black text-[#8e44ad]">
-            G$ 12.000
-          </span>
-
-          <div class="flex items-center justify-between gap-2">
-
-            <button onclick="changeQuantity(this,-1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
-
-            <span class="quantity-value text-xl font-black">1</span>
-
-            <button onclick="changeQuantity(this,1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
-
-            <a
-href="https://wa.me/595982467911?text=Hola,%20quiero%20pedir%20un%20AÇAI 250ML"
-target="_blank"
-class="bg-[#25D366] text-white px-5 py-3 rounded-full font-bold inline-block text-center">
-  Pedir
-</a>
-
-          </div>
-
-        </div>
-
+      <div class="bg-[#8e44ad] text-white px-5 py-4 rounded-3xl shadow-lg border-2 border-[#ffb347]">
+        <p class="text-sm uppercase tracking-[2px] text-purple-100 font-bold">
+          Postres Brisa
+        </p>
+        <p class="text-2xl font-black">
+          Bien fresquitos
+        </p>
       </div>
-
     </div>
-
-
-    <!-- ACAI 300 -->
-
-    <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-
-      <img src="images/acai-300.jpg"
-      class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
-
-      <div class="p-5">
-
-        <h3 class="text-2xl font-black">
-          AÇAI 300ML
-        </h3>
-
-        <div class="mt-6 flex flex-col gap-4">
-
-          <span class="text-3xl font-black text-[#8e44ad]">
-            G$ 15.000
-          </span>
-
-          <div class="flex items-center justify-between gap-2">
-
-            <button onclick="changeQuantity(this,-1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
-
-            <span class="quantity-value text-xl font-black">1</span>
-
-            <button onclick="changeQuantity(this,1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
-
-            <a
-href="https://wa.me/595982467911?text=Hola,%20quiero%20pedir%20un%20AÇAI 300ML"
-target="_blank"
-class="bg-[#25D366] text-white px-5 py-3 rounded-full font-bold inline-block text-center">
-  Pedir
-</a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- MILKSHAKE -->
-
-    <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-
-      <img src="images/milkshake.jpg"
-      class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
-
-      <div class="p-5">
-
-        <h3 class="text-2xl font-black">
-          MILKSHAKE
-        </h3>
-
-        <div class="mt-6 flex flex-col gap-4">
-
-          <span class="text-3xl font-black text-[#8e44ad]">
-            G$ 15.000
-          </span>
-
-          <div class="flex items-center justify-between gap-2">
-
-            <button onclick="changeQuantity(this,-1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
-
-            <span class="quantity-value text-xl font-black">1</span>
-
-            <button onclick="changeQuantity(this,1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
-
-            <a
-href="https://wa.me/595982467911?text=Hola,%20quiero%20pedir%20un%20Milkshake"
-target="_blank"
-class="bg-[#25D366] text-white px-5 py-3 rounded-full font-bold inline-block text-center">
-  Pedir
-</a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- ALFAJOR HELADO -->
-
-    <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-
-      <img src="images/alfajor-helado.jpg"
-      class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
-
-      <div class="p-5">
-
-        <h3 class="text-2xl font-black">
-          ALFAJOR HELADO
-        </h3>
-
-        <div class="mt-6 flex flex-col gap-4">
-
-          <span class="text-3xl font-black text-[#8e44ad]">
-            G$ 5.000
-          </span>
-
-          <div class="flex items-center justify-between gap-2">
-
-            <button onclick="changeQuantity(this,-1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
-
-            <span class="quantity-value text-xl font-black">1</span>
-
-            <button onclick="changeQuantity(this,1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
-
-            <a
-href="https://wa.me/595982467911?text=Hola,%20quiero%20pedir%20un%20ALFAJOR HELADO"
-target="_blank"
-class="bg-[#25D366] text-white px-5 py-3 rounded-full font-bold inline-block text-center">
-  Pedir
-</a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- BANANA SPLIT -->
-
-    <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-
-      <img src="images/banana-split.jpg"
-      class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
-
-      <div class="p-5">
-
-        <h3 class="text-2xl font-black">
-          BANANA SPLIT
-        </h3>
-
-        <div class="mt-6 flex flex-col gap-4">
-
-          <span class="text-3xl font-black text-[#8e44ad]">
-            G$ 10.000
-          </span>
-
-          <div class="flex items-center justify-between gap-2">
-
-            <button onclick="changeQuantity(this,-1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
-
-            <span class="quantity-value text-xl font-black">1</span>
-
-            <button onclick="changeQuantity(this,1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
-
-            <a
-href="https://wa.me/595982467911?text=Hola,%20quiero%20pedir%20un%20BANANA SPLIT"
-target="_blank"
-class="bg-[#25D366] text-white px-5 py-3 rounded-full font-bold inline-block text-center">
-  Pedir
-</a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- CAFE BATIDO MIXTO -->
-
-    <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-
-      <img src="images/cafe-batido-mixto.jpg"
-      class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
-
-      <div class="p-5">
-
-        <h3 class="text-2xl font-black">
-          CAFÉ BATIDO MIXTO
-        </h3>
-
-        <div class="mt-6 flex flex-col gap-4">
-
-          <span class="text-3xl font-black text-[#8e44ad]">
-            G$ 15.000
-          </span>
-
-          <div class="flex items-center justify-between gap-2">
-
-            <button onclick="changeQuantity(this,-1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
-
-            <span class="quantity-value text-xl font-black">1</span>
-
-            <button onclick="changeQuantity(this,1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
-
-            <a
-href="https://wa.me/595982467911?text=Hola,%20quiero%20pedir%20un%20CAFÉ BATIDO MIXTO"
-target="_blank"
-class="bg-[#25D366] text-white px-5 py-3 rounded-full font-bold inline-block text-center">
-  Pedir
-</a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- HELADO 250 -->
-
-    <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
-
-      <img src="images/helado-250.jpg"
-      class="w-full h-64 object-cover hover:scale-110 transition duration-500" />
-
-      <div class="p-5">
-
-        <h3 class="text-2xl font-black">
-          HELADO 250ML
-        </h3>
-
-        <div class="mt-6 flex flex-col gap-4">
-
-          <span class="text-3xl font-black text-[#8e44ad]">
-            G$ 5.000
-          </span>
-
-          <div class="flex items-center justify-between gap-2">
-
-            <button onclick="changeQuantity(this,-1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
-
-            <span class="quantity-value text-xl font-black">1</span>
-
-            <button onclick="changeQuantity(this,1)"
-            class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
-
-            <a
-href="https://wa.me/595982467911?text=Hola,%20quiero%20pedir%20un%20HELADO 250ML"
-target="_blank"
-class="bg-[#25D366] text-white px-5 py-3 rounded-full font-bold inline-block text-center">
-  Pedir
-</a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
   </div>
 
-</section>
+     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+      <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
+        <img src="images/cascao-vainilla.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Cascao vainilla" />
+        <div class="p-5">
+          <h3 class="text-2xl font-black">CASCAO VAINILLA</h3>
+          <div class="mt-6 flex flex-col gap-4">
+            <span class="text-3xl font-black text-[#8e44ad]">G$ 7.000</span>
+            <div class="flex items-center justify-between gap-2 flex-wrap">
+              <button type="button" onclick="changeQuantity(this,-1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
+              <span class="quantity-value text-xl font-black">1</span>
+              <button type="button" onclick="changeQuantity(this,1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
+              <button type="button" onclick="addToCartWithQuantity(this, 'CASCAO VAINILLA', 7000)" class="bg-[#8e44ad] text-white px-5 py-3 rounded-full font-bold">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
+        <img src="images/acai-250.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Acai 250ML" />
+        <div class="p-5">
+          <h3 class="text-2xl font-black">AÇAI 250ML</h3>
+          <div class="mt-6 flex flex-col gap-4">
+            <span class="text-3xl font-black text-[#8e44ad]">G$ 12.000</span>
+            <div class="flex items-center justify-between gap-2 flex-wrap">
+              <button type="button" onclick="changeQuantity(this,-1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
+              <span class="quantity-value text-xl font-black">1</span>
+              <button type="button" onclick="changeQuantity(this,1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
+              <button type="button" onclick="addToCartWithQuantity(this, 'AÇAI 250ML', 12000)" class="bg-[#8e44ad] text-white px-5 py-3 rounded-full font-bold">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
+        <img src="images/acai-300.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Acai 300ML" />
+        <div class="p-5">
+          <h3 class="text-2xl font-black">AÇAI 300ML</h3>
+          <div class="mt-6 flex flex-col gap-4">
+            <span class="text-3xl font-black text-[#8e44ad]">G$ 15.000</span>
+            <div class="flex items-center justify-between gap-2 flex-wrap">
+              <button type="button" onclick="changeQuantity(this,-1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
+              <span class="quantity-value text-xl font-black">1</span>
+              <button type="button" onclick="changeQuantity(this,1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
+              <button type="button" onclick="addToCartWithQuantity(this, 'AÇAI 300ML', 15000)" class="bg-[#8e44ad] text-white px-5 py-3 rounded-full font-bold">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
+        <img src="images/milkshake.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Milkshake" />
+        <div class="p-5">
+          <h3 class="text-2xl font-black">MILKSHAKE</h3>
+          <div class="mt-6 flex flex-col gap-4">
+            <span class="text-3xl font-black text-[#8e44ad]">G$ 15.000</span>
+            <div class="flex items-center justify-between gap-2 flex-wrap">
+              <button type="button" onclick="changeQuantity(this,-1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
+              <span class="quantity-value text-xl font-black">1</span>
+              <button type="button" onclick="changeQuantity(this,1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
+              <button type="button" onclick="addToCartWithQuantity(this, 'MILKSHAKE', 15000)" class="bg-[#8e44ad] text-white px-5 py-3 rounded-full font-bold">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
+        <img src="images/alfajor-helado.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Alfajor helado" />
+        <div class="p-5">
+          <h3 class="text-2xl font-black">ALFAJOR HELADO</h3>
+          <div class="mt-6 flex flex-col gap-4">
+            <span class="text-3xl font-black text-[#8e44ad]">G$ 5.000</span>
+            <div class="flex items-center justify-between gap-2 flex-wrap">
+              <button type="button" onclick="changeQuantity(this,-1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
+              <span class="quantity-value text-xl font-black">1</span>
+              <button type="button" onclick="changeQuantity(this,1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
+              <button type="button" onclick="addToCartWithQuantity(this, 'ALFAJOR HELADO', 5000)" class="bg-[#8e44ad] text-white px-5 py-3 rounded-full font-bold">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
+        <img src="images/banana-split.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Banana split" />
+        <div class="p-5">
+          <h3 class="text-2xl font-black">BANANA SPLIT</h3>
+          <div class="mt-6 flex flex-col gap-4">
+            <span class="text-3xl font-black text-[#8e44ad]">G$ 10.000</span>
+            <div class="flex items-center justify-between gap-2 flex-wrap">
+              <button type="button" onclick="changeQuantity(this,-1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
+              <span class="quantity-value text-xl font-black">1</span>
+              <button type="button" onclick="changeQuantity(this,1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
+              <button type="button" onclick="addToCartWithQuantity(this, 'BANANA SPLIT', 10000)" class="bg-[#8e44ad] text-white px-5 py-3 rounded-full font-bold">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
+        <img src="images/cafe-batido-mixto.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Cafe batido mixto" />
+        <div class="p-5">
+          <h3 class="text-2xl font-black">CAFÉ BATIDO MIXTO</h3>
+          <div class="mt-6 flex flex-col gap-4">
+            <span class="text-3xl font-black text-[#8e44ad]">G$ 15.000</span>
+            <div class="flex items-center justify-between gap-2 flex-wrap">
+              <button type="button" onclick="changeQuantity(this,-1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
+              <span class="quantity-value text-xl font-black">1</span>
+              <button type="button" onclick="changeQuantity(this,1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
+              <button type="button" onclick="addToCartWithQuantity(this, 'CAFÉ BATIDO MIXTO', 15000)" class="bg-[#8e44ad] text-white px-5 py-3 rounded-full font-bold">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-[35px] overflow-hidden shadow-xl border border-[#eadbc8] card-hover fade-up">
+        <img src="images/helado-250.jpg" class="w-full h-64 object-cover hover:scale-110 transition duration-500" alt="Helado 250ML" />
+        <div class="p-5">
+          <h3 class="text-2xl font-black">HELADO 250ML</h3>
+          <div class="mt-6 flex flex-col gap-4">
+            <span class="text-3xl font-black text-[#8e44ad]">G$ 5.000</span>
+            <div class="flex items-center justify-between gap-2 flex-wrap">
+              <button type="button" onclick="changeQuantity(this,-1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">-</button>
+              <span class="quantity-value text-xl font-black">1</span>
+              <button type="button" onclick="changeQuantity(this,1)" class="w-10 h-10 rounded-full bg-gray-200 font-black">+</button>
+              <button type="button" onclick="addToCartWithQuantity(this, 'HELADO 250ML', 5000)" class="bg-[#8e44ad] text-white px-5 py-3 rounded-full font-bold">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOAST -->
+  <div id="toast" style="position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(30px);background:#25D366;color:white;padding:12px 20px;border-radius:18px;font-weight:800;font-size:15px;z-index:999999;opacity:0;pointer-events:none;transition:all .4s ease;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:90%;width:max-content;text-align:center;display:flex;align-items:center;gap:10px;">
+    <span>Producto agregado</span>
+  </div>
 
   <script>
     const cart = [];
@@ -764,38 +617,37 @@ class="bg-[#25D366] text-white px-5 py-3 rounded-full font-bold inline-block tex
         return;
       }
 
-      let message = '🍗 *NUEVO PEDIDO* %0A%0A';
-
+      let message = '🍗 *NUEVO PEDIDO*\n\n';
       let total = 0;
 
       cart.forEach((item) => {
         total += item.subtotal;
-        message += `• ${item.quantity}x ${item.name} - ${formatPrice(item.subtotal)}%0A`;
+        message += `• ${item.quantity}x ${item.name} - ${formatPrice(item.subtotal)}\n`;
       });
 
-      message += `%0A🧾 *TOTAL:* ${formatPrice(total)}`;
+      message += `\n🧾 *TOTAL:* ${formatPrice(total)}`;
+      message += '\n\n🚚 El costo del delivery varía según la zona de entrega.';
+
+      fetch('https://script.google.com/macros/s/AKfycbw3HxULB-np3x_deg7Qr-H35_hE885kQ7cJ_uuzMP0Hn0AA-RlgUNtrhWIMMk7EIDkWiw/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          items: cart
+        })
+      });
 
       const phone = '595982467911';
-      const url = `https://wa.me/${phone}?text=${message}`;
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
-// ENVIAR A GOOGLE SHEETS
-fetch("https://script.google.com/macros/s/AKfycbw3HxULB-np3x_deg7Qr-H35_hE885kQ7cJ_uuzMP0Hn0AA-RlgUNtrhWIMMk7EIDkWiw/exec", {
-  method: "POST",
-  mode: "no-cors",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    items: cart
-  })
-});
-
-window.open(url, '_blank');
+      window.open(url, '_blank');
     }
 
     function toggleCart() {
-      const cart = document.getElementById('cartPanel');
-      cart.classList.toggle('hidden');
+      const cartPanel = document.getElementById('cartPanel');
+      cartPanel.classList.toggle('hidden');
     }
 
     function scrollToSection() {
@@ -814,12 +666,8 @@ window.open(url, '_blank');
         return;
       }
 
-      let total = 0;
-
       cartItems.innerHTML = cart
         .map((item, index) => {
-          total += item.price;
-
           return `
             <div class="bg-[#fff8f0] border border-[#eadbc8] rounded-2xl p-4 flex justify-between items-center gap-3">
               <div>
@@ -867,61 +715,22 @@ window.open(url, '_blank');
       current = (current + 1) % slides.length;
 
       heroImage.src = slides[current].image;
+      heroImage.alt = slides[current].title;
       heroTitle.textContent = slides[current].title;
       heroDescription.textContent = slides[current].description;
     }, 4000);
+
     function showToast() {
+      const toast = document.getElementById('toast');
 
-  const toast =
-    document.getElementById('toast');
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) translateY(0px)';
 
-  toast.style.opacity = '1';
-
-  toast.style.transform =
-    'translateX(-50%) translateY(0px)';
-
-  setTimeout(() => {
-
-    toast.style.opacity = '0';
-
-    toast.style.transform =
-      'translateX(-50%) translateY(30px)';
-
-  }, 2000);
-
-}
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(30px)';
+      }, 2000);
+    }
   </script>
 </body>
-<div id="toast"
-style="
-position:fixed;
-bottom:90px;
-left:50%;
-transform:translateX(-50%) translateY(30px);
-background:#25D366;
-color:white;
-padding:12px 20px;
-border-radius:18px;
-font-weight:800;
-font-size:15px;
-z-index:999999;
-opacity:0;
-pointer-events:none;
-transition:all .4s ease;
-box-shadow:0 10px 30px rgba(0,0,0,.25);
-max-width:90%;
-width:max-content;
-text-align:center;
-display:flex;
-align-items:center;
-gap:10px;
-">
-
-  <span style="font-size:20px;"></span>
-
-  <span>
-    Producto agregado
-  </span>
-
-</div>
 </html>
